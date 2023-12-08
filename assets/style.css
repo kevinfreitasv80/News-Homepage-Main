@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+:root{
+    --color1: hsl(35, 77%, 62%);
+    --color2: hsl(5, 85%, 63%);
+    --color3: hsl(36, 100%, 99%);
+    --color4: hsl(233, 8%, 79%);
+    --color5: hsl(236, 13%, 42%);
+    --color6: hsl(240, 100%, 5%);
+}
+
+html, body, button{
+    font-family: "Inter", sans-serif;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+body>*{
+    margin: auto;
+}
+p{
+    font-size: .9375em;
+}
+button, li, .inforItems strong, .new h2, .menus img{
+    transition: .4s;
+    cursor: pointer;
+}
+button{
+    background: var(--color2);
+    text-transform: uppercase;
+    border: none;
+    padding: .9em 2em;
+    font-weight: 700;
+    color: white;
+    letter-spacing: .3em;
+}
+button:hover, button:focus{
+    background: var(--color6);
+}
+
+header{
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+header, ul, .futureOfWeb>article, .items, .items>article{
+    display: flex;
+}
+header, ul, .items>article{
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+li{
+    color: var(--color5);
+}
+li:hover, li:focus{
+    color: var(--color2);
+}
+li:not(:last-child){
+    margin-right: 2em;
+}
+.Margin{
+    position: relative;
+    margin: 1.2em 15vw 0 15vw;
+}
+
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 29.3675em;
+}
+.futureOfWeb>article{
+    margin-top: 1em;
+}
+.futureOfWeb h1{
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: -.02em;
+    max-width: 5em;
+    margin: 0 1.5em 0 0;
+}
+.futureOfWeb p{
+    max-width: 23em;
+    margin-bottom: 2.5em;
+}
+picture img{
+    width: 100%;
+}
+
+.new{
+    margin-left: 2em;
+    background: var(--color6);
+    padding: 1em;
+}
+.articleNew:not(:last-child){
+    border-bottom: .0625em solid white;
+}
+.new h1{
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--color1);
+}
+.new h2{
+    color: white;
+    font-size: 1.2em;
+}
+.new h2:hover, .new h2:focus{
+    color: var(--color1);
+}
+.new p{
+    color: var(--color4);
+    padding-bottom: 1em;
+}
+
+.items{
+    margin-top: 3em;
+    grid-column: 1/-1;
+    justify-content: space-between;
+}
+.items img{
+    width: 7em;
+    height: 8.574375em;
+}
+.inforItems{
+    margin-left: 1em;
+}
+.inforItems strong:hover, .inforItems strong:focus{
+    color: var(--color2);
+}
+.inforItems p{
+    max-width: 15em;
+}
+h3{
+    color: var(--color4);
+    font-size: 2em;
+    margin: 0 0 .1em 0;
+}
+.inforItems p{
+    margin: .5em 0 0 0;
+    line-height: 2em;
+}
+.menus, .menus img[src$="close.svg"], .layerDiv{
+    display: none;
+}
+.menus{
+    right: 2.5em;
+}
+.menus, .menus img{
+    position: absolute;
+}
+.menus img[src$="close.svg"]{
+    margin-top: -.3em;
+}
+.layerDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: calc(100% - 17.1525em);
+    min-height: 100vh;
+    background: #00000060;
+}
+
+@media screen and (max-width: 85em) {
+    .items{
+        margin-top: 0;
+        margin-left: 2em;
+        grid-column: 2/3;
+        flex-direction: column;
+    }
+    .items>article{
+        margin-bottom: .3em;
+    }
+    .items p{
+        line-height: 1.2em;
+    }
+    .new{
+        z-index: 2;
+        grid-column: 1/-1;
+        grid-row: 2;
+        margin: 0;
+    }
+    .new>section{
+        display: flex;
+        justify-content: space-between;
+    }
+    .articleNew:not(:last-child){
+        border-bottom: none;
+        border-right: .0625em solid white;
+    }
+    .new>section h2{
+        max-width: 12em;
+    }
+    .new>section p{
+        font-size: .9em;
+        max-width: 14.2em;
+    }
+    .new h1{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 75em) {
+    .items{
+        margin-top: 3em;
+        margin-left: 0;
+        grid-column: 1/-1;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .items>article{
+        margin-bottom: .3em;
+    }
+    .items p{
+        line-height: 1.2em;
+    }
+    .new{
+        z-index: 2;
+        grid-column: 1/-1;
+        grid-row: 2;
+        margin-top: 2em;
+    }
+    .new>section{
+        display: flex;
+    }
+    .new h1{
+        width: 100%;
+    }
+    .futureOfWeb h1{
+        max-width: 7em;
+    }
+    .futureOfWeb p{
+        max-width: 50em;
+    }
+    main{
+        display: block;
+    }
+    .items p{
+        font-size: .85em;
+    }
+}
+@media screen and (min-width: 98.4375em) {
+    .futureOfWeb img{
+        height: 18em;
+    }
+    .futureOfWeb>article{
+        justify-content: space-between;
+    }
+    .futureOfWeb p{
+        max-width: 40em;
+    }
+}
+@media screen and (max-width: 71.5625em) {
+    .menus{
+        display: block;
+    }
+    .Margin{
+        margin: 1.2em 5vw 0 5vw;
+    }
+    ul{
+        display: none;
+        position: absolute;
+        top: -2.5em;
+        right: -5vw;
+        background: white;
+        min-height: 100%;
+        padding: 7em 10em 0 2em;
+    }
+    ul li:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, auto);
+        gap: 2em;
+    }
+    .futureOfWeb{
+        grid-column: 1/-1;
+    }
+    .new, .items{
+        margin-top: 0;
+        grid-row: 2;
+        margin-bottom: 2em;
+    }
+    .new{
+        grid-column: 1;
+    }
+    .items{
+        grid-column: 2;
+    }
+    .new section, .items{
+        flex-direction: column;
+    }
+    .articleNew:not(:last-child){
+        border-right: none;
+        border-bottom: .0625em solid white;
+    }
+}
+@media (max-width: 42.8571429em) {
+    .Margin{
+        margin: .7em;
+    }
+    main{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+    }
+    .futureOfWeb>article{
+        flex-direction: column;
+    }
+    .futureOfWeb h1{
+        font-size: 2.5em;
+        max-width: max-content;
+        margin: 0;
+    }
+    .futureOfWeb p{
+        max-width: 30em;
+    }
+    .items{
+        grid-row: 3;
+        grid-column: 1;
+    }
+}
